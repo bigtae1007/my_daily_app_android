@@ -6,6 +6,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.myDaily.MyDailyApp.presentation.feature.home.HomeScreen
+import com.mydaily.mydailycoverapp.presentation.feature.foodBlogPrompt.FoodBlogPromptScreen
 
 @Composable
 fun AppNavGraph(navController: NavHostController) {
@@ -17,8 +18,7 @@ fun AppNavGraph(navController: NavHostController) {
             HomeScreen(navController)
         }
         composable(Route.FOOD_BLOG_PROMPT) {
-            // TODO: 나중에 실제 화면 만들기
-            Text("음식 블로그 프롬포트 화면")
+            FoodBlogPromptScreen(navController)
         }
     }
 }

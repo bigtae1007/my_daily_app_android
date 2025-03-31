@@ -8,14 +8,14 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.mydaily.mydailycoverapp.ui.component.text.TitleText
-import com.mydaily.mydailycoverapp.ui.util.bottomBorder
+import com.mydaily.mydailycoverapp.ui.util.headerBottomBorder
 
 @Composable
 fun AppMainHeader(title: String, modifier: Modifier) {
     Box(
         modifier = modifier
             .fillMaxWidth()
-            .bottomBorder(thick = 2.dp)
+            .headerBottomBorder(thick = 2.dp)
             .padding(vertical = 10.dp, horizontal = 16.dp),
         contentAlignment = Alignment.CenterStart
     ) {

@@ -7,7 +7,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 
-fun Modifier.bottomBorder(color: Color = Color.Gray, thick: Dp = 1.dp): Modifier {
+fun Modifier.headerBottomBorder(color: Color = Color.Gray, thick: Dp = 1.dp): Modifier {
     return this.drawBehind {
         val strokeWidth = thick.toPx()
         val y = size.height - strokeWidth / 2
