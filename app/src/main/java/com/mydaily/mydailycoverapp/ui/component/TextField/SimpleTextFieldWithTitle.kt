@@ -13,7 +13,8 @@ fun SimpleTextFieldWithTitle(
     title: String = "",
     checkChange: ((text: String) -> String)? = null,
     placeholder: String? = "",
-    singleLine: Boolean = true
+    singleLine: Boolean = true,
+    value: String
 ) {
     Column(modifier = Modifier) {
         Box(modifier = Modifier) {
@@ -21,7 +22,7 @@ fun SimpleTextFieldWithTitle(
         }
         Box(modifier = Modifier.padding(start = 10.dp)) {
             SimpleTextField(
-                initValue = "",
+                initValue = value,
                 checkChange = checkChange,
                 placeholder = placeholder,
                 singleLine = singleLine
