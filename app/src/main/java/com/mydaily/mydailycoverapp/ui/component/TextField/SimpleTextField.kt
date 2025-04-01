@@ -23,19 +23,18 @@ import com.mydaily.mydailycoverapp.ui.theme.CustomColor
 
 @Composable
 fun SimpleTextField(
-    initValue: String,
-    checkChange: ((text: String) -> String)? = null,
+    value: String,
+    onChange: (text: String) -> Unit,
     placeholder: String? = "",
     singleLine: Boolean = true,
     focusRequester: FocusRequester? = null,
     onNext: (() -> Unit)? = null,
-    imeAction :ImeAction = ImeAction.Default
+    imeAction: ImeAction = ImeAction.Default
 ) {
-    val input = rememberInputState(initial = initValue, checkChange = checkChange)
 
     BasicTextField(
-        value = input.value,
-        onValueChange = input.onValueChange,
+        value = value,
+        onValueChange = onChange,
         singleLine = singleLine,
         keyboardOptions = KeyboardOptions.Default.copy(
             imeAction = imeAction
@@ -62,7 +61,7 @@ fun SimpleTextField(
                     .padding(horizontal = 16.dp),
                 contentAlignment = Alignment.CenterStart
             ) {
-                if (input.value.isEmpty()) {
+                if (value.isEmpty()) {
                     PlaceholderText(placeholder ?: "")
                 }
                 innerTextField() // ✅ 실제 텍스트 입력 필드

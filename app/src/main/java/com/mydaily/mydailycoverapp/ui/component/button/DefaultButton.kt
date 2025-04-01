@@ -16,7 +16,7 @@ import androidx.compose.ui.unit.dp
 import com.mydaily.mydailycoverapp.ui.theme.CustomColor
 
 @Composable
-fun AnimatedButton(
+fun DefaultButton(
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
     normalColor: Color = CustomColor.trans,
@@ -38,7 +38,7 @@ fun AnimatedButton(
 
     Button(
         onClick = onClick,
-        modifier = modifier.fillMaxWidth(),
+        modifier = modifier,
         interactionSource = interactionSource,
         colors = ButtonDefaults.buttonColors(
             containerColor = backgroundColor,

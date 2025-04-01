@@ -1,24 +1,19 @@
 // presentation/feature/home/HomeScreen.kt
 package com.myDaily.MyDailyApp.presentation.feature.home
 
-import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.mydaily.mydailycoverapp.navigation.Route
-import com.mydaily.mydailycoverapp.presentation.feature.home.HomeMenuItem
 import com.mydaily.mydailycoverapp.presentation.feature.home.HomeMenuSection
 import com.mydaily.mydailycoverapp.presentation.feature.home.MenuItem
 import com.mydaily.mydailycoverapp.presentation.feature.home.MenuSection
 import com.mydaily.mydailycoverapp.ui.component.header.AppMainHeader
 import com.mydaily.mydailycoverapp.ui.component.sperate.GrayBlank
-import com.mydaily.mydailycoverapp.ui.component.text.SubTitleText
 
 
 @Composable

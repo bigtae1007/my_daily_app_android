@@ -4,7 +4,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.mydaily.mydailycoverapp.ui.component.button.AnimatedButton
+import com.mydaily.mydailycoverapp.ui.component.button.DefaultButton
 import com.mydaily.mydailycoverapp.ui.component.text.CaptionText
 import com.mydaily.mydailycoverapp.ui.component.text.DescText
 import com.mydaily.mydailycoverapp.ui.theme.CustomColor
@@ -15,7 +15,7 @@ fun HomeMenuItem(title: String, onClick: () -> Unit, index: Int) {
         modifier = Modifier
             .fillMaxWidth()
     ) {
-        AnimatedButton(
+        DefaultButton(
             onClick = onClick,
             modifier = Modifier
                 .fillMaxWidth()

@@ -13,7 +13,7 @@ import com.mydaily.mydailycoverapp.ui.component.text.DescText
 @Composable
 fun SimpleTextFieldWithTitle(
     title: String = "",
-    checkChange: ((text: String) -> String)? = null,
+    onChange: ((text: String) -> Unit),
     placeholder: String? = "",
     singleLine: Boolean = true,
     value: String,
@@ -27,8 +27,8 @@ fun SimpleTextFieldWithTitle(
         }
         Box(modifier = Modifier.padding(start = 10.dp)) {
             SimpleTextField(
-                initValue = value,
-                checkChange = checkChange,
+                value = value,
+                onChange = onChange,
                 placeholder = placeholder,
                 singleLine = singleLine,
                 focusRequester = focusRequester,
