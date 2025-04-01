@@ -5,6 +5,8 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.focus.FocusRequester
+import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
 import com.mydaily.mydailycoverapp.ui.component.text.DescText
 
@@ -14,7 +16,10 @@ fun SimpleTextFieldWithTitle(
     checkChange: ((text: String) -> String)? = null,
     placeholder: String? = "",
     singleLine: Boolean = true,
-    value: String
+    value: String,
+    onNext: (() -> Unit)? = null,
+    focusRequester: FocusRequester? = null,
+    imeAction: ImeAction = ImeAction.Default
 ) {
     Column(modifier = Modifier) {
         Box(modifier = Modifier) {
@@ -25,7 +30,10 @@ fun SimpleTextFieldWithTitle(
                 initValue = value,
                 checkChange = checkChange,
                 placeholder = placeholder,
-                singleLine = singleLine
+                singleLine = singleLine,
+                focusRequester = focusRequester,
+                onNext = onNext,
+                imeAction = imeAction
             )
         }
     }
